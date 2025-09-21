@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-finance-app/static/css/main.4657d7ec.css",
-    "main.js": "/personal-finance-app/static/js/main.467a5a79.js",
+    "main.js": "/personal-finance-app/static/js/main.f3e30faf.js",
     "static/js/453.57423a27.chunk.js": "/personal-finance-app/static/js/453.57423a27.chunk.js",
     "static/media/emma-richardson.jpg": "/personal-finance-app/static/media/emma-richardson.4f060cda81c2bca57774.jpg",
     "static/media/rina-sato.jpg": "/personal-finance-app/static/media/rina-sato.24f61511d6c4e41bdb58.jpg",
@@ -42,11 +42,11 @@
     "static/media/icon-caret-down.svg": "/personal-finance-app/static/media/icon-caret-down.32cb7aae29acc2ac4da16590340cb2f5.svg",
     "static/media/logo-small.svg": "/personal-finance-app/static/media/logo-small.f4e94d5e96823f6a2de8b906be42badb.svg",
     "main.4657d7ec.css.map": "/personal-finance-app/static/css/main.4657d7ec.css.map",
-    "main.467a5a79.js.map": "/personal-finance-app/static/js/main.467a5a79.js.map",
+    "main.f3e30faf.js.map": "/personal-finance-app/static/js/main.f3e30faf.js.map",
     "453.57423a27.chunk.js.map": "/personal-finance-app/static/js/453.57423a27.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4657d7ec.css",
-    "static/js/main.467a5a79.js"
+    "static/js/main.f3e30faf.js"
   ]
 }
