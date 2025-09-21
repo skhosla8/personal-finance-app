@@ -1,8 +1,9 @@
 // Base Imports
 import React, { useContext } from 'react';
+import useLocalStorageState from '../../../hooks/localStorageState';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store';
+import { RootState } from '../../../redux/store'
 import { ContextObj, Context } from '../../../context/Context';
 import { Pot } from '../../../interfaces/index';
 // Icons/Images
@@ -12,7 +13,9 @@ import PotIcon from '../../../assets/icon-pot.svg';
 const Pots = () => {
     const { setActiveNavItem } = useContext<ContextObj>(Context);
 
-    const pots: Pot[] = useSelector((state: RootState) => state.finances.allFinances.pots);
+    const potsInitial = useSelector((state: RootState) => state.finances.allFinances.pots);
+    const [pots, setPots] = useLocalStorageState('pots', potsInitial);
+
     const arrOfTotal = pots.map((pot: Pot) => pot.total);
     const totalSaved = arrOfTotal.reduce((acc: number, val: number) => acc + val, 0);
 
@@ -44,7 +47,7 @@ const Pots = () => {
                 </div>
 
                 <div className='overview__container2__pots__main__categories'>
-                    {displayedPots.map((pot: Pot, i) => (
+                    {displayedPots.map((pot: Pot, i: number) => (
                         <div key={i} style={{ borderLeft: `4px solid ${pot.theme}` }} className='overview__container2__pots__main__categories__category'>
                             <div className='overview__container2__pots__main__categories__category__name'>{pot.name}</div>
                             <div className='overview__container2__pots__main__categories__category__total'>${pot.total}</div>

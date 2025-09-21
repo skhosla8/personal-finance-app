@@ -1,5 +1,6 @@
 // Base Imports 
 import React, { useState } from 'react';
+import useLocalStorageState from '../../../hooks/localStorageState';
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../redux/store';
@@ -11,7 +12,7 @@ import CancelIcon from '../../../assets/no.png';
 const PotsMain = () => {
     const potsInitial = useSelector((state: RootState) => state.finances.allFinances.pots);
 
-    const [pots, setPots] = useState(potsInitial);
+    const [pots, setPots] = useLocalStorageState('pots', potsInitial);
     const [pot, setPot] = useState(pots[0]);
     const [potName, setPotName] = useState('Savings');
     const [amountAdded, setAmountAdded] = useState(0);
@@ -45,7 +46,7 @@ const PotsMain = () => {
 
 
     const updatePots = () => {
-        let updatedPots = pots.map(pot => {
+        let updatedPots = pots.map((pot: Pot) => {
             if (pot.name === potName) {
                 return { ...pot, total: pot.total + amountAdded }
             }
