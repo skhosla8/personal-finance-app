@@ -1,0 +1,410 @@
+@use '../abstracts/variables' as *;
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    margin-top: -1rem;
+
+    &__container1 {
+        display: flex;
+        flex-direction: row;
+
+        &__balance,
+        &__income,
+        &__expenses {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 287px;
+            height: 90px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            padding: 1rem;
+
+            :nth-child(1) {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            :nth-child(2) {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+
+        &__balance {
+            background-color: $grey-900;
+            color: #FFFFFF;
+        }
+
+        &__income {
+            margin: 0 1.2rem;
+        }
+
+        &__income,
+        &__expenses {
+            background-color: #FFFFFF;
+
+            :nth-child(1) {
+                color: $grey-500;
+            }
+
+            :nth-child(2) {
+                color: $grey-900;
+            }
+        }
+    }
+
+    &__container2 {
+        display: flex;
+        flex-direction: row;
+        margin: 1.5rem 0;
+
+        &__pots {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            width: 475px;
+            height: 165px;
+            padding: 1.5rem;
+            box-sizing: border-box;
+
+            &__heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__name {
+                    font-weight: 700;
+                }
+
+                &__details {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    color: $grey-500;
+
+                    img {
+                        margin-left: 0.8rem;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+
+            &__main {
+                display: flex;
+                flex-direction: row;
+                box-sizing: border-box;
+                padding: 1rem 0;
+
+                &__totalSaved {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    background-color: $beige-100;
+                    border-radius: 8px;
+                    width: 200px;
+                    height: 90px;
+                    box-sizing: border-box;
+                    padding: 1rem;
+
+                    &__imgContainer {
+                        margin-right: 1.1rem;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    &__description {
+                        :nth-child(1) {
+                            color: $grey-500;
+                            font-size: 0.8rem;
+                        }
+
+                        :nth-child(2) {
+                            font-weight: 700;
+                            font-size: 1.5rem;
+                            margin-top: 0.5rem;
+                            color: $grey-900;
+                        }
+                    }
+                }
+
+                &__categories {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.5rem;
+                    height: 90px;
+                    margin-left: 1rem;
+
+                    &__category {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        font-size: 0.8rem;
+                        height: 35px;
+                        width: 120px;
+                        box-sizing: border-box;
+                        border-radius: 2px;
+                        padding-left: 1.2rem;
+
+                        &__name {
+                            color: $grey-500;
+                        }
+
+                        &__total {
+                            color: $grey-900;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__transactions {
+            width: 475px;
+            border-radius: 8px;
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            background-color: #FFFFFF;
+            color: $grey-900;
+            box-sizing: border-box;
+            margin-top: 1.5rem;
+
+            &__heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+
+                &__name {
+                    font-weight: 700;
+                }
+
+                &__details {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    color: $grey-500;
+
+                    img {
+                        margin-left: 0.8rem;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+
+            &__main {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 1.45rem 0;
+                font-size: 0.8rem;
+
+                &:nth-child(-n+5) {
+                    border-bottom: 1px solid $grey-100;
+                }
+
+                &__avatarContainer {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    img {
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 0.8rem;
+                    }
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                &__details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &__transaction {
+                        font-weight: 700;
+                        align-self: flex-end;
+                    }
+
+                    &__date {
+                        color: $grey-500;
+                    }
+                }
+            }
+        }
+
+        &__budgets {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            width: 400px;
+            height: 380px;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            margin-left: 1.5rem;
+
+            &__heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__name {
+                    font-weight: 700;
+                }
+
+                &__details {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    color: $grey-500;
+
+                    img {
+                        margin-left: 0.8rem;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+
+            &__main {
+                display: flex;
+                flex-direction: row;
+
+                &__chart {
+                    width: 200px;
+                    margin-top: 2rem;
+
+                    &__text {
+                        margin-left: 1rem;
+                        margin-top: 1rem;
+                        text-align: center;
+
+                        div:nth-child(1) {
+                            font-weight: bold;
+                            font-size: 1.5rem;
+                        }
+
+                        div:nth-child(2) {
+                            font-size: 0.8rem;
+                            color: $grey-500;
+                            margin-top: 0.2rem;
+                        }
+                    }
+                }
+
+                &__categories {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 3rem;
+                    margin-left: 1.5rem;
+
+                    &__category {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 0.7rem;
+
+                        &__bar {
+                            width: 0.25rem;
+                            height: 2.2rem;
+                            margin-right: 0.7rem;
+                            border-radius: 2px;
+
+                        }
+
+                        &__text {
+                            font-size: 0.8rem;
+
+                            &__title {
+                                color: $grey-500;
+                                margin-top: 0.1rem;
+                            }
+
+                            &__cost {
+                                font-weight: 700;
+                                margin-top: 0.2rem;
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        &__recurringBills {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            width: 400px;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            margin-left: 1.5rem;
+            margin-top: 1.5rem;
+
+            &__heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__name {
+                    font-weight: 700;
+                }
+
+                &__details {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    color: $grey-500;
+
+                    img {
+                        margin-left: 0.8rem;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+
+            &__main {
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+
+                &__bill {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+                    background-color: $beige-100;
+                    border-radius: 8px;
+                    padding-left: 0.7rem;
+                    padding-right: 0.7rem;
+                    color: $grey-500;
+                    font-size: 0.8rem;
+
+                    &__total {
+                        color: $grey-900;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

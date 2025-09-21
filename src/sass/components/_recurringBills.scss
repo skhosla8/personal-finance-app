@@ -1,0 +1,187 @@
+@use '../abstracts/variables' as *;
+
+.recurringBills {
+    margin-left: 1.6rem;
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+
+        &__container1 {
+            width: 350px;
+            height: 210px;
+            background-color: #000000;
+            border-radius: 15px;
+            margin-top: 1rem;
+            color: #FFFFFF;
+
+            &__icon {
+                width: 40px;
+                height: 40px;
+                margin-top: 2rem;
+                margin-left: 2rem;
+            }
+
+            &__total-bills {
+                margin-top: 2rem;
+                margin-left: 2rem;
+            }
+
+            &__amount {
+                margin-top: 1rem;
+                margin-left: 2rem;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+
+        &__container2 {
+            width: 350px;
+            height: 210px;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            margin-top: 2rem;
+
+            &__summary {
+                font-weight: bold;
+                margin: 1rem;
+                padding-top: 1.7rem;
+            }
+
+            &__classification {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 0;
+                font-size: 0.8rem;
+                margin: 0 1rem;
+
+                &__amount {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &__container3 {
+            width: 800px;
+            height: 800px;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            margin-top: 2rem;
+            margin-left: 1.6rem;
+            padding: 2.5rem;
+
+            &__search {
+                width: 300px;
+                display: flex;
+                align-items: center;
+                border: 1px solid #000;
+                padding-right: 10px;
+                padding-left: 10px;
+                border-radius: 7px;
+
+                &__input {
+                    width: 300px;
+                    border: none;
+                    padding: 13px 0;
+                }
+            }
+
+            &__sortBy-label {
+                color: #696868;
+                margin-right: 0.5rem;
+            }
+
+            select {
+                width: 120px;
+                background-image: url('../assets/icon-caret-down.svg');
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                -webkit-appearance: none;
+                /* For WebKit browsers */
+                -moz-appearance: none;
+                /* For Mozilla browsers */
+                appearance: none;
+                padding: 13px;
+                border-radius: 7px;
+            }
+
+            &__titles {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 0.5px solid $grey-300;
+                padding-top: 2rem;
+                padding-bottom: 0.8rem;
+                color: #696868;
+                font-size: 0.8rem;
+
+                &__bill-title {
+                    width: 120px;
+                }
+
+                &__due-date {
+                    //margin-left: 14rem;
+                    width: 100px;
+                }
+
+            }
+
+            &__element {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                border-bottom: 0.5px solid $grey-300;
+                font-size: 0.8rem;
+
+                &__avatar-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 600px;
+
+                    &__avatar {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+
+                    &__name {
+                        color: #000000;
+                        font-weight: bold;
+                        margin-left: 1rem;
+                    }
+                }
+
+                &__due-date {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10rem;
+                    width: 400px;
+                    color: #696868;
+                    text-align: left;
+
+                    &__completion-icon,
+                    &__warning-icon {
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 1rem;
+                    }
+
+                    &__highlightedText {
+                        color: #008000;
+                    }
+                }
+
+                &__amount {
+                    font-weight: bold;
+                    margin-left: 14rem;
+                }
+            }
+
+        }
+    }
+}
